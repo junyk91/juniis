@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="layout" template="/WEB-INF/jsp/layout/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp"/>
+		<put-attribute name="container" value="/WEB-INF/jsp/layout/container.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp"/>
+	</definition>
+	
+	<!--
+	<definition name="apipotal/*/*/*" extends="APIPotalTemplate">
+		<put-attribute name="contents" value="/WEB-INF/jsp/apipotal/{1}/{2}/{3}.jsp" />
+		<put-attribute name="menu"	value="/WEB-INF/jsp/apipotal/common/layout/menu/sidemenuadmin.jsp" />
+	</definition>		  
+	-->
+		
+	<definition name="mng/*" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/mng/{1}.jsp"/>
+	</definition>
+	
+	<definition name="mng/*/*" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/mng/{1}/{2}.jsp"/>
+	</definition>
+	
+<!-- 	
+	<definition name="ServiceMng" extends="layout">
+		<put-attribute name="contents" value="/WEB-INF/jsp/mng/service/ServiceModelManage.jsp"/>
+	</definition>
+	
+-->
+	<definition name="map" template="/WEB-INF/jsp/map/map.jsp">
+	</definition>
+	
+</tiles-definitions>
